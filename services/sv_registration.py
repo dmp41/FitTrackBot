@@ -11,11 +11,11 @@ async def calculate_calories(user_dict):
 
     if user_dict['gender'] == '👨 Мужской':
 
-        BMR = 10 * user_dict['weight'] + 6.25 * user_dict['height'] - user_dict['age'] + 5
+        BMR = 10 * float(user_dict['weight']) + 6.25 * float(user_dict['height']) - user_dict['age'] + 5
 
     if user_dict['gender'] == '👩 Женский':
 
-        BMR = 10 * user_dict['weight'] + 6.25 * user_dict['height'] - user_dict['age'] - 161
+        BMR = 10 * float(user_dict['weight']) + 6.25 * float(user_dict['height']) - user_dict['age'] - 161
 
     if user_dict['activity'] == '🛋️  Сидячий образ жизни':
         k = 1.2

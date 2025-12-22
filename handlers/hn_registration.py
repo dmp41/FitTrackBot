@@ -81,8 +81,8 @@ async def weight_mess(callback: types.CallbackQuery, state: FSMContext):
     await state.set_state(FSMFillForm.fill_calories)
 
 
-@router.callback_query(StateFilter(FSMFillForm.fill_calories),
-                   F.data.in_(button5))
+@router.callback_query(StateFilter(FSMFillForm.fill_calories))
+                   #F.data.in_(button5))
 async def weight_mess(callback: types.CallbackQuery, state: FSMContext):
     await state.update_data(calories=callback.data)
     user_dict = await state.get_data()
