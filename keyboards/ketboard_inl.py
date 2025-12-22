@@ -2,8 +2,6 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeybo
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
-
-
 def menu_keyboard(*buttons: str) -> InlineKeyboardMarkup:
     kb_builder: InlineKeyboardBuilder = InlineKeyboardBuilder()
     # Наполняем клавиатуру кнопками-закладками в порядке возрастания
