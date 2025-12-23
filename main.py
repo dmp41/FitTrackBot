@@ -3,7 +3,7 @@ import logging
 
 from aiogram import Bot, Dispatcher
 from config_data.config import Config, load_config
-from handlers import hn_start, hn_registration
+from handlers import hn_start, hn_registration, hn_weight
 
 #from keyboards.set_menu import set_main_menu
 
@@ -37,6 +37,7 @@ async def main():
     # Регистриуем роутеры в диспетчере
     dp.include_router(hn_start.router)
     dp.include_router(hn_registration.router)
+    dp.include_router(hn_weight.router)
 
 
     # Пропускаем накопившиеся апдейты и запускаем polling

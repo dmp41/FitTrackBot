@@ -88,6 +88,7 @@ async def weight_mess(callback: types.CallbackQuery, state: FSMContext):
     user_dict = await state.get_data()
     text = greetings.format(name=user_dict['name'])
     await callback.message.answer(text=text, reply_markup=menu_keyboard_g)
+    await state.clear()
     #await state.set_state(FSMFillForm.fill_calories)
 
 
